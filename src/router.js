@@ -1,46 +1,38 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PrefixReferencedDois from "@/views/PrefixReferencedDois.vue";
-import PrefixReferencedOrcids from "@/views/PrefixReferencedOrcids.vue";
-import MembersList from "@/views/MembersList.vue";
-import PrefixDois from "@/views/PrefixDois.vue";
+import Convocatories from "@/views/Convocatories.vue";
 
 const routes = [
   {
     path: '/',
-    redirect: '/doi'
+    redirect: '/home'
   },
   {
-    path: '/doi',
-    name: 'doi',
+    path: '/home',
+    name: 'home',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ './views/DoiView.vue')
+    component: () => import(/* webpackChunkName: "about" */ './views/HomeView.vue')
   },
   {
-    path: '/prefix/info',
-    name: 'prefix info',
-    component: () => import(/* webpackChunkName: "about" */ './views/PrefixInfo.vue')
+    path: '/carrera/formacio',
+    name: 'carrera-formacio',
+    component: () => import(/* webpackChunkName: "about" */ './views/CarreraFormacio.vue')
   },
   {
-    path: '/prefix/dois',
-    name: 'prefixDois',
-    component: PrefixDois
+    path: '/carrera/docencia',
+    name: 'carrera-docencia',
+    component: () => import(/* webpackChunkName: "about" */ './views/CarreraDocencia.vue')
   },
   {
-    path: '/prefix/referenced/dois',
-    name: 'prefixReferencedDois',
-    component: PrefixReferencedDois
+    path: '/carrera/recerca',
+    name: 'carrera-recerca',
+    component: () => import(/* webpackChunkName: "about" */ './views/CarreraRecerca.vue')
   },
   {
-    path: '/prefix/referenced/orcids',
-    name: 'prefixReferencedOrcids',
-    component: PrefixReferencedOrcids
-  },
-  {
-    path: '/members',
-    name: 'members',
-    component: MembersList
+    path: '/convocatories',
+    name: 'convocatories',
+    component: Convocatories
   },
   {
     path: '/table',

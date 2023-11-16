@@ -3,7 +3,7 @@
     <nav class="navbar top-navbar navbar-expand-md navbar-light">
 
       <div class="navbar-header">
-        <a class="sr-only" href="https://upc.edu">Inici</a>
+        <a class="visually-hidden" href="https://upc.edu">Inici</a>
         <a class="navbar-brand" href="https://upc.edu" aria-hidden="true">
           <!-- Logo icon -->
           <b aria-hidden="true">
@@ -15,31 +15,30 @@
           </span>
         </a>
       </div>
-
-
       <div class="navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a @click='navToggle' class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)">
-              <span class="sr-only">"Hide"</span><i ref='navToggle' class="nav-toggler-i mdi mdi-menu burger"></i>
+              <span class="visually-hidden">"Hide"</span><i ref='navToggle' class="nav-toggler-i bi bi-list h3"></i>
             </a>
           </li>
           <li class="nav-item">
             <a @click='sideBarToggle' class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)">
-              <span class="sr-only">"Show"</span><i class="nav-toggler-i mdi mdi-menu burger"></i>
+              <span class="visually-hidden">"Show"</span><i class="nav-toggler-i bi bi-list h3"></i>
             </a>
           </li>
         </ul>
 
-        <h2 class='navbar-nav mr-auto'>
+        <h2 class="navbar-nav">
           <span class="difuminado">Carrera Profesional</span>
         </h2>
 
-        <ul class="navbar-nav my-lg-0">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <router-link to="/about" class="nav-link">
-              <span class="sr-only">"Información"</span>
-              <i class="mdi mdi-information-outline" style="color: #942682;"></i>
+              <span class="visually-hidden">Información</span>
+
+              <i class="bi bi-info-circle-fill"></i>
             </router-link>
           </li>
         </ul>
@@ -99,6 +98,29 @@ export default {
   margin-left: 10px;
 }
 
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #ffc72c;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #FF0000, #942682, #ec6500);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #FFFFFF, #FF0000, #942682, #ec6500);
+}
+
+.navbar-header {
+  border-bottom: 1px solid #eae9e9;
+}
+.navbar-collapse {
+  border-bottom: 1px solid #eae9e9;
+  /*background-color: #313131;*/
+}
+
+/*.navbar-expand-md .navbar-collapse {
+  background: black;
+}*/
+
 
 .mini-sidebar #navbar-brand-text {
   display: none !important;
@@ -114,10 +136,6 @@ export default {
   }
 }
 
-.burger {
-  font-size: 20px;
-  color: #942682;
-}
 .nav-item {
   cursor: pointer;
 }

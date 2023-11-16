@@ -2,7 +2,7 @@ import http from "../http-common";
 import store from '@/store';
 import {format} from "date-fns";
 
-class CrossrefService {
+class ApiService {
 
     MAILTO = "&mailto=info.idp@upc.edu"
 
@@ -216,4 +216,4 @@ class CrossrefService {
 
 }
 
-export default new CrossrefService()
+export default new ApiService()

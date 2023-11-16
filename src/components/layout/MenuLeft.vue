@@ -19,7 +19,7 @@
                   v-if="item.tos && (item.hasOwnProperty('visible')?item.visible:true) && (item.tos.some(i=>i.visible||!i.hasOwnProperty('visible')))"
               >
                 <template #title>
-                  <i class="mdi" :class="`mdi-${item.icon}`"></i>
+                  <i class="bi" :class="`bi-${item.icon}`"></i>
                   <span class="hide-menu">{{item.text}}</span>
                 </template>
                 <el-menu-item
@@ -47,55 +47,19 @@
                     aria-expanded="false"
                     class="waves-effect waves-dark"
                 >
-                  <i class="mdi" :class="`mdi-${item.icon}`"></i>
+                  <i class="bi" :class="`bi-${item.icon}`"></i>
                   <span class="hide-menu" >{{item.text}}</span>
                 </router-link>
               </el-menu-item>
             </template>
-
           </el-menu>
-
-
-
-
-
-
-
-
-
-
-
-
-
       </nav>
-
     </div>
   </aside>
 </template>
 
 <script>
 
-
-/**
- * Component del menú de navegació.
- *
- * Els element poden ser de dos tipus d'objecte simple amb els atributs següents:
- *
- * ## Simple
- *
- * - **to**: `String` ruta a l'element.
- * - **icon**: `String` icona mdi de l'element (sense mdi-), podeu veure la llista completa a https://assets.upc.edu/upc-webapp-ui@0/main/icon-material.html.
- * - **text**: `String` descripció de l'element.
- * - **visible**: `Boolean` que determina la visibilitat de l'element.
- *
- * ## Desplegable
- *
- * - **tos**: `Array` d'elements de menú.
- * - **icon**: `String` icona mdi de l'element (sense mdi-), podeu veure la llista completa a https://assets.upc.edu/upc-webapp-ui@0/main/icon-material.html.
- * - **text**: `String` descripció de l'element.
- * - **visible**: `Boolean` que determina la visibilitat de l'element.
- *
- */
 export default {
   name: "MenuLeft",
   props: {
@@ -133,16 +97,6 @@ export default {
       this.$refs['el-menu-navegacio'].openedMenus = []
     },
 
-
-    /*lastUpdate(){
-      let req = new XMLHttpRequest();
-      req.open('HEAD', 'data/items-all.json', true);
-      req.send(null);
-      //var headers = req.getAllResponseHeaders().toLowerCase();
-      let dateUpdate = new Date(req.getResponseHeader("last-modified"));
-      this.update = dateUpdate
-      alert(this.update)
-    }*/
   },
   watch: {
     '$route' () {
@@ -167,8 +121,6 @@ export default {
 
 <style lang="css" scoped>
 
-
-
 .scroll-sidebar {
   overflow-y: auto;
 }
@@ -191,7 +143,6 @@ export default {
       padding-right:10px;
     }
   }
-
 }
 
 
@@ -217,7 +168,7 @@ export default {
 }
 
 .sidebar-nav .el-menu-item a.is-active i, .sidebar-nav .el-menu-item a.active span, .sidebar-nav .el-submenu a.active i, .sidebar-nav .el-submenu a.active span {
-  color: #fff;
+  color: #FF0000;
   font-weight: 500;
 }
 

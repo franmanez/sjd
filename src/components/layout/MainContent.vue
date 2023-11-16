@@ -8,20 +8,15 @@
 
 <script>
 
-    /**
-     * Component intern que mostra el contingut determinat per la ruta de navegació.
-     */
     export default {
         name: 'MainContent',
         props: {
-          componentKey: String,
+
         },
     }
 </script>
 
 <style scoped>
-
-
 
 .page-wrapper {
   padding-top: 0px;

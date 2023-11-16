@@ -1,12 +1,4 @@
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,500,500italic,700,700italic,900italic,900);
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
 
 #app {
     font-family: "Roboto", sans-serif;
@@ -18,16 +10,7 @@ body {
     margin-top: 0px;
 }
 
-.gradient-custom {
-    /* fallback for old browsers */
-    background: #ffc72c;
 
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgb(0, 0, 0), rgb(1, 118, 152));
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(1, 118, 152))
-}
 
 
 .center {
@@ -36,17 +19,13 @@ body {
 
 a {
     text-decoration: none; /* Para quitar el subrayado predeterminado */
-    color: #017698FF; /* Cambia el color a tu preferencia */
+    color: #942682; /* Cambia el color a tu preferencia */
 }
 
 a:hover {
     text-decoration: none;
 }
 
-
-.bg-doi-green {
-    background-color: #017698FF;
-}
 
 .card-no-border .left-sidebar, .card-no-border .sidebar-nav {
     background: #942682;
@@ -57,7 +36,23 @@ a:hover {
 }
 
 .text-sjd-naranja {
-    color: #ec6500;
+    color: #ec6500 !important;
+}
+
+.bg-sjd-lila {
+    background-color: #942682;
+}
+
+.text-sjd-lila {
+    color: #942682 !important;
+}
+
+.bg-sjd-rojo {
+    background-color: #FF0000;
+}
+
+.text-sjd-rojo {
+    color: #FF0000 !important;
 }
 
 .difuminado {

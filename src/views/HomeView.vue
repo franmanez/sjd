@@ -1,160 +1,152 @@
 <template>
-  <div>
-    <div>
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
 
-            <img src="@/assets/background1.png" alt="UPC" class="w-100 img-repeat" style="height: 400px;">
+  <div class="container-fluid">
 
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>
-                  DOIBoard <span style="color: #4f5858; font-weight: bold;">Crossref</span>
-                  <img src="@/assets/logo-crossref.png" class="mx-3 mb-2" width="30" alt="Logo">
-                </h1>
-                <p>Information about DOIs and CrossRef prefixes.</p>
-                <p>
-                  <router-link to="/doi" class="btn btn-lg btn-dark" >
-                    DOI Search
-                  </router-link>
-                </p>
-              </div>
+    <h3 class="mb-4 text-muted"><i class="bi bi-house"></i> Inici </h3>
+
+
+
+    <div class="row mt-3">
+
+
+      <div class="col-lg-6 col-xlg-6 col-md-6">
+        <div class="card">
+
+            <div class="card-body text-secondary">
+              <form>
+                <div class="form-group">
+                  <label for="input-01" class="form-label">Email address:</label>
+                  <input type="email" class="form-control" id="input-01">
+                </div>
+                <div class="form-group">
+                  <label for="input-02" class="form-label">Password:</label>
+                  <input type="password" class="form-control" id="input-02">
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 flex-wrap">
+                  <button type="button" class="btn btn-primary">Submit</button>
+                  <button type="button" class="btn btn-danger">Cancel</button>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="carousel-item">
-
-            <img src="@/assets/background3.jpg" alt="UPC" class="w-100 img-repeat" style="height: 400px;">
-
-
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>
-                  DOIBoard <span style="color: #4f5858; font-weight: bold;">Crossref</span>
-                  <img src="@/assets/logo-crossref.png" class="mx-3 mb-2" width="30" alt="Logo">
-                </h1>
-                <p class="text-dark">Information about DOIs and CrossRef prefixes.</p>
-                <p>
-                  <router-link to="/prefix/info" class="btn btn-lg btn-dark" >
-                    Prefix Information
-                  </router-link>
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="container text-center">
-
-      <!-- Four Column Section Start -->
-
-      <div class="row mt-5">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="circle-yellow">
-              <span><i class="bi bi-clipboard-data text-light" style="font-size: 3rem;"></i></span>
-            </div>
-          </div>
-          <h4>Prefix: Member Information</h4>
-          <p class="text-secondary" style="text-align: justify;">From a DOI prefix (e.g., 10.5821), it retrieves the total number of registered DOIs by that institution, as well as the number of DOIs by document type. Additionally, for each document type, you can view the metadata coverage and graphs based on publication date and first deposit date</p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mx-0">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="circle-dark">
-              <span><i class="bi bi-list-check text-light" style="font-size: 3rem;"></i></span>
-            </div>
-          </div>
-          <h4>Prefix: DOI List</h4>
-          <p class="text-secondary" style="text-align: justify;">It retrieves a paginated list with the information (title, DOI, deposit date, and document type) of all DOIs for a given prefix. It allows for filtering through a free-form search query.</p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="circle-yellow">
-              <span><i class="bi bi-graph-up-arrow text-light" style="font-size: 3rem;"></i></span>
-            </div>
-          </div>
-          <h4>Prefix: DOIs and ORCIDs</h4>
-          <p class="text-secondary" style="text-align: justify;">It retrieves a list of the most referenced DOIs or ORCIDs from an institution (based on the prefix). <br>- DOI: Number of times that a DOI is referenced by other Crossref DOIs. <br>- ORCID: Number of times that an ORCID is referenced by other Crossref DOIs</p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="circle-dark">
-              <span><i class="bi bi-search text-light" style="font-size: 3rem;"></i></span>
-            </div>
-          </div>
-          <h4>DOI Search</h4>
-          <p class="text-secondary" style="text-align: justify;">It allows you to search for a DOI and retrieve the most important metadata: publisher, document type, title, authors, publication date, first deposit date, and the URL.</p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="circle-yellow">
-              <span><i class="bi bi-person-bounding-box text-light" style="font-size: 3rem;"></i></span>
-            </div>
-          </div>
-          <h4>Member Search</h4>
-          <p class="text-secondary" style="text-align: justify;">Enables searching by institution name. Retrieves the institution's prefix, location, and the total number of DOIs. Displays the results in a paginated list.</p>
-        </div>
-
       </div>
 
-      <!-- Fixed Background Start -->
-      <div id="fixed"></div>
+
+      <div class="col-lg-6 col-xlg-6 col-md-6">
+        <div class="card mb-5">
+          <div class="card-header">
+            <h5 class="text-muted">Convocatoria seleccionada</h5>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h1 class="">342</h1>
+              <i class="bi bi-info-circle-fill me-1" style="font-size: 2.3rem;"></i>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a class="btn btn-light btn-sm" role="button"><i class="bi bi-wifi"></i> COVERAGE</a>
+            <a class="btn btn-light btn-sm" role="button"><i class="bi bi-pie-chart-fill"></i> PUBLICATION</a>
+            <a class="btn btn-light btn-sm" role="button"><i class="bi bi-bar-chart"></i> DEPOSITED</a>
+          </div>
+
+        </div>
+      </div>
+
 
 
     </div>
+
+
+
+    <div class="container col-12 alert alert-danger mt-4 rounded-0" v-if="error != null">{{error}}</div>
 
   </div>
 </template>
 
 <script>
 
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  import http from '@/http-common';
+  import {ref} from "vue";
+
+  export default {
+    name: "DoiSearch",
+    components: {},
+
+    setup(){
+      const isLoading = ref(false)
+      const contentPrefix = ref({})
+      const doi = ref('10.5821/ace.v4i12.2483');
+      const contentDOI = ref({});
+      const error = ref(null);
+
+
+      const clear = () => {
+        contentDOI.value = ''
+        error.value = null
+      }
+
+      const getDOI = async () => {
+        isLoading.value = true
+        clear()
+
+        try {
+          const response = await http.get('/works/'+doi.value.trim())
+          if (response.status === 200) {
+
+            let published = response.data.message.published['date-parts'][0]
+            if(published.length === 1) published = published[0]
+            else if(published.length === 2) published = published[0] + "-" + published[1]
+            else if(published.length === 3) published = published[0] + "-" + published[1] + "-" + published[2]
+
+            contentDOI.value = {
+              'title': response.data.message.title[0],
+              'author': response.data.message.author,
+              'publisher': response.data.message.publisher,
+              'published': published,
+              'created': response.data.message.created['date-time'],
+              'last-deposited': response.data.message.deposited['date-time'],
+              'resource': response.data.message.resource.primary.URL,
+              'type': response.data.message.type,
+              'referenced': response.data.message['is-referenced-by-count']
+            }
+
+          } else {
+            error.value = '404 Not Found';
+          }
+        } catch (e) {
+          error.value = 'ERROR: DOI does not exists';
+        }
+        isLoading.value = false
+      }
+
+      return{
+        contentPrefix,
+        contentDOI,
+        getDOI,
+        doi,
+        isLoading,
+        error,
+      }
+
+    }
+
+
   }
-}
+
 </script>
 
 <style scoped>
-.circle-yellow {
-  width: 100px; /* Elige el tamaño que desees */
-  height: 100px; /* Elige el tamaño que desees */
-  background-color: #fcb520;
-  border-radius: 50%; /* Esto hace que la forma sea redonda */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+p {
+  font-size: 1.2rem;
 }
 
-.circle-dark {
-  width: 100px; /* Elige el tamaño que desees */
-  height: 100px; /* Elige el tamaño que desees */
-  background-color: #000000;
-  border-radius: 50%; /* Esto hace que la forma sea redonda */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.img-repeat {
-  object-fit: cover;
-  object-position: center center;
-}
 
 </style>
