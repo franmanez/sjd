@@ -19,7 +19,7 @@
                   v-if="item.tos && (item.hasOwnProperty('visible')?item.visible:true) && (item.tos.some(i=>i.visible||!i.hasOwnProperty('visible')))"
               >
                 <template #title>
-                  <i class="bi" :class="`bi-${item.icon}`"></i>
+                  <i class="bi" :class="`bi-${item.icon} me-2`" style='font-size:24px;'></i>
                   <span class="hide-menu">{{item.text}}</span>
                 </template>
                 <el-menu-item
@@ -31,10 +31,12 @@
                       :to="subitem.to"
                       class="waves-effect waves-dark"
                   >
+                    <i class="bi" :class="`bi-${subitem.icon}`"></i>
                     <span class="hide-menu" >{{subitem.text}}</span>
                   </router-link>
                 </el-menu-item>
               </el-sub-menu>
+
               <el-menu-item
                   :index="`${item.to}`"
                   :key="key"
@@ -119,17 +121,22 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+
+
+<style lang="scss" scoped>
 
 .scroll-sidebar {
   overflow-y: auto;
 }
 :deep(.el-sub-menu) {
   .el-menu-item {
+
     height: unset;
     line-height: unset;
+
     & > a {
-      padding-left: 15px;
+      padding-left: 5px;
+
     }
   }
 }
@@ -162,14 +169,12 @@ export default {
   color: #fff;
 }
 
-.sidebar-nav .el-menu-item.is-active i, .sidebar-nav .el-menu-item.is-active span, .sidebar-nav .el-menu-item:hover i, .sidebar-nav .el-menu-item:hover span, .sidebar-nav .el-menu-item.is-opened i, .sidebar-nav .el-menu-item.is-opened span, .sidebar-nav .el-submenu.is-active i, .sidebar-nav .el-submenu.is-active span, .sidebar-nav .el-submenu:hover i, .sidebar-nav .el-submenu:hover span, .sidebar-nav .el-submenu.is-opened i, .sidebar-nav .el-submenu.is-opened span {
+.sidebar-nav .el-menu-item.is-active i, .sidebar-nav .el-menu-item.is-active span, .sidebar-nav .el-menu-item:hover i, .sidebar-nav .el-menu-item:hover span, .sidebar-nav .el-menu-item.is-opened i, .sidebar-nav .el-menu-item.is-opened span, .sidebar-nav .el-sub-menu.is-active i, .sidebar-nav .el-sub-menu.is-active span, .sidebar-nav .el-sub-menu:hover i, .sidebar-nav .el-sub-menu:hover span, .sidebar-nav .el-sub-menu.is-opened i, .sidebar-nav .el-sub-menu.is-opened span {
   color: #fff;
   font-weight: 500;
 }
 
-.sidebar-nav .el-menu-item a.is-active i, .sidebar-nav .el-menu-item a.active span, .sidebar-nav .el-submenu a.active i, .sidebar-nav .el-submenu a.active span {
-  color: #FF0000;
-  font-weight: 500;
-}
+
+
 
 </style>

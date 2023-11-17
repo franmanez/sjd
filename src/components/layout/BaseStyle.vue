@@ -8,6 +8,9 @@
     }
 </script>
 
+<!--style lang="css">@import "https://assets.upc.edu/upc-webapp-ui@0/assets/plugins/bootstrap/css/bootstrap.min.css";</style>
+<style lang="css">@import "https://assets.upc.edu/upc-webapp-ui@0/main/css/style.css";</style>
+<style lang="css">@import "https://assets.upc.edu/upc-webapp-ui@0/main/css/pages/timeline-vertical-horizontal.css";</style-->
 <style lang="scss">@import "src/styles/styles";</style>
 <style lang="scss">@import "src/styles/app";</style>
 

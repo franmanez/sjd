@@ -48,31 +48,18 @@ export default {
           text: 'Inici'
         },
         {
-          to: '/carrera/formacio',
-          icon: 'envelope-paper',
-          text: 'Carrera Formacio'
-        },
-        {
-          to: '/carrera/docencia',
-          icon: 'mortarboard',
-          text: 'Carrera Docencia'
-        },
-        {
-          to: '/carrera/recerca',
-          icon: 'journals',
-          text: 'Carrera Recerca'
-        },
-        {
           to: '/convocatories',
           icon: 'gear',
           text: 'Convocatories'
         },
         {
           tos: [
-            {to: '/carrera/omplir3', text: 'Formació'},
+            {to: '/carrera/formacio',icon: 'envelope-paper', text: 'Formació'},
+            {to: '/carrera/docencia',icon: 'mortarboard', text: 'Docencia'},
+            {to: '/carrera/recerca',icon: 'journals', text: 'Recerca'},
           ],
-          icon: 'gear',
-          text: 'Administració'
+          icon: 'bar-chart',
+          text: 'Carrera Professional'
         },
       ]
     }
