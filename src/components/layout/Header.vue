@@ -24,7 +24,7 @@
           </li>
           <li class="nav-item">
             <a @click='sideBarToggle' class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)">
-              <span class="visually-hidden">"Show"</span><i class="nav-toggler-i bi bi-list h3"></i>
+              <span class="visually-hidden">"Show"</span><i class="nav-toggler-i bi bi-list h3 text-sjd-lila"></i>
             </a>
           </li>
         </ul>
@@ -38,7 +38,7 @@
             <router-link to="/about" class="nav-link">
               <span class="visually-hidden">Información</span>
 
-              <i class="bi bi-info-circle-fill"></i>
+              <i class="bi bi-info-circle-fill text-sjd-lila"></i>
             </router-link>
           </li>
         </ul>
